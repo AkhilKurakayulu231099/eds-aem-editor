@@ -19,6 +19,14 @@
 .cards .cards-card-image {
   line-height: 0;
 }
+.cards .cards-card-image {
+  transition: transform 0.3s ease; /* Smooth transition for transformation */
+}
+
+/* On hover, the image will scale up (move forward) */
+.cards .cards-card-image:hover {
+  transform: scale(1.1); /* Increases the size to 110% of the original size */
+}
 
 .cards > ul > li img {
   width: 100%;
