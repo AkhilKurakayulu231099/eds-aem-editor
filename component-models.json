@@ -16,6 +16,50 @@
     ]
   },
   {
+    "id": "evidentcards",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "evimage",
+        "label": "EVImage"
+      },
+      {
+        "component": "text",
+        "name": "evtext",
+        "value": "",
+        "label": "EVText",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "evrichtext",
+        "value": "",
+        "label": "EVRichText",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author",
+        "label": "Author",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "title",
     "fields": [
       {
@@ -120,6 +164,13 @@
         "name": "image",
         "label": "Image",
         "multi": false
+      },
+      {
+        "component": "links",
+        "name": "link",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       },
       {
         "component": "richtext",
