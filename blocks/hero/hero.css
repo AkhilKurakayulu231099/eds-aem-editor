@@ -1,5 +1,5 @@
 /* Style for the main hero wrapper */
-.hero-wrapper > div:last-child > div{
+.hero-wrapper {
     background-color: #fff;
     max-width: calc(100% - 60px);
     min-height: 300px;
