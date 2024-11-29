@@ -25,9 +25,9 @@
 .hero h1 {
   font-size: 36px; /* Adjust as per your design */
   font-weight: bold;
-  color: #002244; /* Text color */
+  color: #005cb9; /* Text color */
   margin: 20px 0 10px;
-  text-align: center; /* Center align */
+  text-align: left; /* Center align */
 }
  
 .hero p {
