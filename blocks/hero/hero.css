@@ -2,7 +2,7 @@
 .hero-wrapper {
   bottom: 10%; /* Adjust positioning */
   left: 10%;   /* Adjust positioning */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: white; /* Semi-transparent background */
   color: white;
   padding: 15px;
   max-width: 80%; /* Adjust width as needed */
