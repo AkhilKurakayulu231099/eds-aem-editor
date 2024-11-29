@@ -1,7 +1,6 @@
 /* Style for the main hero wrapper */
 .hero-wrapper {
     background-color: #fff;
-    width: 600px;
     max-width: calc(100% - 60px);
     min-height: 300px;
     padding: 25px 50px 50px;
