@@ -1,58 +1,59 @@
-/* Wrapper for hero section */
+/* Hero Section Wrapper */
 .hero-wrapper {
   position: relative;
   width: 100%;
-  padding: 0; /* Remove any extra padding if present */
+  height: 300px; /* Adjust as needed */
+  background-image: url('/path/to/your/image.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Ensures text is readable */
 }
  
-.hero.block {
-  display: block;
-  text-align: center;
-  background-color: #ffffff; /* Set background if needed */
-  margin: 0 auto;
-}
- 
-/* Image Styling */
-.cards-card-image img {
+/* Overlay effect to darken the background for better readability */
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 300px; /* Same height as seen in the first image */
-  object-fit: cover; /* Ensure the image fills the container proportionally */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+  z-index: 1; /* Ensures the overlay is below the text */
 }
  
-/* Text Section Styling */
-.evidenthomtext-container h1 {
-  font-size: 32px; /* Adjust based on appearance */
-  color: #002244;
-  font-weight: 700;
-  margin-top: 20px;
+/* Text Content Styling */
+.hero-wrapper h1 {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 2; /* Ensure text is above overlay */
+  margin: 0;
 }
  
-.evidenthomtext-container p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #666666;
+.hero-wrapper p {
+  position: relative;
+  font-size: 1.2rem;
+  z-index: 2;
   margin-top: 10px;
-  margin-bottom: 30px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 800px;
 }
  
-/* Control spacing if container extends unnecessarily */
-.cards-container {
-  max-width: 1200px;
-  margin: 0 auto; /* Center content within the page */
-}
- 
-/* Optional responsive behavior */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .cards-card-image img {
-    height: 200px; /* Reduce image height for smaller screens */
+  .hero-wrapper {
+    height: 200px;
   }
  
-  .evidenthomtext-container h1 {
-    font-size: 24px;
+  .hero-wrapper h1 {
+    font-size: 2rem;
   }
  
-  .evidenthomtext-container p {
-    font-size: 16px;
+  .hero-wrapper p {
+    font-size: 1rem;
   }
 }
- 
