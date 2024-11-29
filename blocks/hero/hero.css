@@ -12,6 +12,10 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
+.hero-container .hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
 
 .hero.block {
   display: flex;
