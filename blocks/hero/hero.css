@@ -1,6 +1,5 @@
 /* Style for the main hero wrapper */
 .hero-wrapper {
-position: relative;
     background-color: #fff;
     width: 600px;
     max-width: calc(100% - 60px);
