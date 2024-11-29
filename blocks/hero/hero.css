@@ -1,71 +1,50 @@
-/* Hero Wrapper */
+/* Style for the main hero wrapper */
 .hero-wrapper {
   position: relative;
   width: 100%;
-  height: 300px; /* Adjust to match the image's desired display height */
+  padding: 20px 0;
+  background-color: #f4f4f4; /* Add if needed for fallback */
+}
+ 
+.hero.block {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
  
-/* Image Styling */
-.hero-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container properly */
-  position: absolute; /* Allows the image to act as a background */
-  top: 0;
-  left: 0;
-  z-index: 1; /* Image stays beneath the text */
+/* Image container styling */
+.hero img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  max-width: 1920px;
+  height: auto;
+  object-fit: cover;
 }
  
-/* Text Overlay */
-.hero-wrapper .evidenthomtext-container {
-  position: relative;
-  z-index: 2; /* Text stays above the image */
-  text-align: center;
-  color: white; /* Makes text readable on any background */
-}
- 
-.hero-wrapper h1 {
-  font-size: 2.5rem;
+/* Text content within the hero block */
+.hero h1 {
+  font-size: 36px; /* Adjust as per your design */
   font-weight: bold;
-    color: white;
-  margin: 0;
+  color: #002244; /* Text color */
+  margin: 20px 0 10px;
+  text-align: center; /* Center align */
 }
  
-.hero-wrapper p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  line-height: 1.5;
+.hero p {
+  font-size: 18px; /* Adjust as needed */
+  color: #555555;
+  text-align: center;
+  margin: 0 10px;
   max-width: 800px;
 }
  
-/* Optional: Add a dark overlay effect for better readability */
-.hero-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
-  z-index: 1;
-}
- 
-/* Responsive Styling */
+/* Responsive adjustments for smaller devices */
 @media (max-width: 768px) {
-  .hero-wrapper h1 {
-    font-size: 2rem;
+  .hero h1 {
+    font-size: 28px;
   }
  
-  .hero-wrapper p {
-    font-size: 1rem;
-  }
- 
-  .hero-wrapper {
-    height: 200px; /* Adjust for smaller devices */
+  .hero p {
+    font-size: 16px;
   }
 }
-has context menu
