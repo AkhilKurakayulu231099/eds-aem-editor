@@ -12,6 +12,10 @@ footer .footer > div {
 footer .footer p {
   margin: 0;
   text-align: center;
+color: var(--c);
+    font-family: var(--ff);
+    font-size: var(--fz);
+    line-height: var(--lh);
 }
 
 @media (width >= 900px) {
