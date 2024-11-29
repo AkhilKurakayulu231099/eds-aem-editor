@@ -60,6 +60,18 @@
     ]
   },
   {
+    "id": "evidenthometext",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "evidenthometext",
+        "value": "",
+        "label": "Evidenthometext",
+        "valueType": "string"
+      },
+    ]
+  },
+  {
     "id": "title",
     "fields": [
       {
