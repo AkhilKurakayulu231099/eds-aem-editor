@@ -1,49 +1,58 @@
+/* Wrapper for hero section */
 .hero-wrapper {
   position: relative;
   width: 100%;
-  padding: 20px 0;
-  background-color: #f4f4f4; /* Add if needed for fallback */
+  padding: 0; /* Remove any extra padding if present */
 }
  
 .hero.block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
- 
-/* Image container styling */
-.hero img {
-  width: 100%; /* Ensure the image takes the full width of its container */
-  max-width: 1920px;
-  height: auto;
-  object-fit: cover;
-}
- 
-/* Text content within the hero block */
-.hero h1 {
-  font-size: 36px; /* Adjust as per your design */
-  font-weight: bold;
-  color: #002244; /* Text color */
-  margin: 20px 0 10px;
-  text-align: center; /* Center align */
-}
- 
-.hero p {
-  font-size: 18px; /* Adjust as needed */
-  color: #555555;
+  display: block;
   text-align: center;
-  margin: 0 10px;
-  max-width: 800px;
+  background-color: #ffffff; /* Set background if needed */
+  margin: 0 auto;
 }
  
-/* Responsive adjustments for smaller devices */
+/* Image Styling */
+.cards-card-image img {
+  width: 100%;
+  height: 300px; /* Same height as seen in the first image */
+  object-fit: cover; /* Ensure the image fills the container proportionally */
+}
+ 
+/* Text Section Styling */
+.evidenthomtext-container h1 {
+  font-size: 32px; /* Adjust based on appearance */
+  color: #002244;
+  font-weight: 700;
+  margin-top: 20px;
+}
+ 
+.evidenthomtext-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666666;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+ 
+/* Control spacing if container extends unnecessarily */
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center content within the page */
+}
+ 
+/* Optional responsive behavior */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
+  .cards-card-image img {
+    height: 200px; /* Reduce image height for smaller screens */
   }
  
-  .hero p {
+  .evidenthomtext-container h1 {
+    font-size: 24px;
+  }
+ 
+  .evidenthomtext-container p {
     font-size: 16px;
   }
 }
+ 
