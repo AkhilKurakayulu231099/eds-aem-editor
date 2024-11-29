@@ -12,9 +12,16 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
+.hero-container {
+    position: absolute;
+  bottom: 10%; /* Adjust positioning */
+  left: 10%;   /* Adjust positioning */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 15px;
+  max-width: 80%; /* Adjust width as needed */
+  border-radius: 5px; /* Optional: rounded corners */
+  font-family: Arial, sans-serif; /* Adjust font family */
 }
 
 .hero.block {
