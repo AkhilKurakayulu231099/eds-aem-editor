@@ -10,8 +10,7 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
-  position: relative; /* Necessary for z-index to work */
-  overflow: hidden; /* Ensures that anything outside the bounds of the card is hidden */
+  position: relative; /* Necessary for positioning the text above the image */
 }
 
 .cards .cards-card-body {
@@ -21,6 +20,7 @@
 .cards .cards-card-image {
   line-height: 0;
   transition: transform 0.3s ease, z-index 0s ease; /* Add z-index transition */
+  position: relative; /* So we can control the stacking order */
 }
 
 /* Hover effect for image to scale up and come forward */
@@ -36,19 +36,22 @@
   object-fit: cover;
 }
 
-/* Make the entire card clickable */
-.cards > ul > li a {
+/* Position the text link above the image */
+.cards .cards-card-link {
   display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute; /* Makes the link cover the whole card */
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 16px; /* Adjust this as needed to position it above the image */
+  left: 16px; /* Position from the left of the card */
+  z-index: 3; /* Ensure the link is above the image */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional background to improve readability */
+  padding: 8px 16px;
   text-decoration: none; /* Remove underline from link */
-  z-index: 1; /* Keeps the link underneath the image by default */
+  color: #333; /* Adjust text color */
+  font-weight: bold; /* Style for the link */
 }
 
-/* When the card is clicked, highlight the link */
-.cards > ul > li:active a {
-  background-color: rgba(0, 0, 0, 0.1); /* Adds a light background effect when clicked */
+/* Optional: Add hover effect on the link */
+.cards .cards-card-link:hover {
+  color: var(--highlight-color); /* Example hover effect */
+  text-decoration: underline; /* Underline on hover */
 }
