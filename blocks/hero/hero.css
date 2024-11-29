@@ -13,7 +13,6 @@
     margin-bottom: 20px;
 }
 .hero-container {
-    position: absolute;
   bottom: 10%; /* Adjust positioning */
   left: 10%;   /* Adjust positioning */
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
