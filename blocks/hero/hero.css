@@ -9,11 +9,11 @@
   min-height: 300px;
 }
 
-.hero h1 {
+.hero h1 p {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  color: white;
 }
 
 .hero picture {
