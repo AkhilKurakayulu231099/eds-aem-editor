@@ -10,6 +10,8 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  position: relative; /* Necessary for z-index to work */
+  overflow: hidden; /* Ensures that anything outside the bounds of the card is hidden */
 }
 
 .cards .cards-card-body {
@@ -18,18 +20,35 @@
 
 .cards .cards-card-image {
   line-height: 0;
-}
-.cards .cards-card-image {
-  transition: transform 0.3s ease; /* Smooth transition for transformation */
+  transition: transform 0.3s ease, z-index 0s ease; /* Add z-index transition */
 }
 
-/* On hover, the image will scale up (move forward) */
+/* Hover effect for image to scale up and come forward */
 .cards .cards-card-image:hover {
   transform: scale(1.1); /* Increases the size to 110% of the original size */
+  z-index: 2; /* Makes the image come forward */
 }
 
+/* Ensures the image maintains aspect ratio and responsiveness */
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* Make the entire card clickable */
+.cards > ul > li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Makes the link cover the whole card */
+  top: 0;
+  left: 0;
+  text-decoration: none; /* Remove underline from link */
+  z-index: 1; /* Keeps the link underneath the image by default */
+}
+
+/* When the card is clicked, highlight the link */
+.cards > ul > li:active a {
+  background-color: rgba(0, 0, 0, 0.1); /* Adds a light background effect when clicked */
 }
