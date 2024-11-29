@@ -24,7 +24,7 @@
 }
 
 /* On hover, the image will scale up (move forward) */
-.cards .cards-card-image:hover {
+.cards:hover {
   transform: scale(1.1); /* Increases the size to 110% of the original size */
 }
 
