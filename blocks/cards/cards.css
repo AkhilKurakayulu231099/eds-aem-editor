@@ -10,8 +10,6 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
-  position: relative; /* Necessary for positioning the text above the image */
-  overflow: hidden; /* Ensures that anything outside the bounds of the card is hidden */
 }
 
 .cards .cards-card-body {
@@ -20,44 +18,18 @@
 
 .cards .cards-card-image {
   line-height: 0;
-  transition: transform 0.3s ease, z-index 0s ease; /* Add z-index transition */
-  position: relative; /* So we can control the stacking order */
+}
+.cards .cards-card-image {
+  transition: transform 0.3s ease; /* Smooth transition for transformation */
 }
 
-/* Hover effect for image to scale up and come forward */
+/* On hover, the image will scale up (move forward) */
 .cards .cards-card-image:hover {
   transform: scale(1.1); /* Increases the size to 110% of the original size */
-  z-index: 2; /* Makes the image come forward */
 }
 
-/* Ensures the image maintains aspect ratio and responsiveness */
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-
-/* Position the text link above the image */
-.cards .cards-card-link {
-  display: block;
-  position: absolute;
-  top: 16px; /* Adjust this as needed to position it above the image */
-  left: 16px; /* Position from the left of the card */
-  z-index: 3; /* Ensure the link is above the image */
-  background-color: rgba(255, 255, 255, 0.8); /* Optional background to improve readability */
-  padding: 8px 16px;
-  text-decoration: none; /* Remove underline from link */
-  color: #333; /* Adjust text color */
-  font-weight: bold; /* Style for the link */
-}
-
-/* Optional: Add hover effect on the link */
-.cards .cards-card-link:hover {
-  color: var(--highlight-color); /* Example hover effect */
-  text-decoration: underline; /* Underline on hover */
-}
-
-/* Optional: Add active state for the link */
-.cards > ul > li:active .cards-card-link {
-  background-color: rgba(0, 0, 0, 0.1); /* Adds a light background effect when clicked */
 }
