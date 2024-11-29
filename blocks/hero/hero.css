@@ -16,6 +16,10 @@
   color: white;
 }
 
+.hero p {
+  color: white;
+}
+
 .hero picture {
   position: absolute;
   z-index: -1;
