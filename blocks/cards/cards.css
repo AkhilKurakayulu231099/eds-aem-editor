@@ -11,6 +11,7 @@
   border: 1px solid #dadada;
   background-color: var(--background-color);
   position: relative; /* Necessary for positioning the text above the image */
+  overflow: hidden; /* Ensures that anything outside the bounds of the card is hidden */
 }
 
 .cards .cards-card-body {
@@ -54,4 +55,9 @@
 .cards .cards-card-link:hover {
   color: var(--highlight-color); /* Example hover effect */
   text-decoration: underline; /* Underline on hover */
+}
+
+/* Optional: Add active state for the link */
+.cards > ul > li:active .cards-card-link {
+  background-color: rgba(0, 0, 0, 0.1); /* Adds a light background effect when clicked */
 }
