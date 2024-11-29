@@ -1,13 +1,18 @@
 /* Style for the main hero wrapper */
 .hero-wrapper {
-  bottom: 10%; /* Adjust positioning */
-  left: 10%;   /* Adjust positioning */
-  background-color: white; /* Semi-transparent background */
-  color: white;
-  padding: 15px;
-  max-width: 80%; /* Adjust width as needed */
-  border-radius: 5px; /* Optional: rounded corners */
-  font-family: Arial, sans-serif; /* Adjust font family */
+position: relative;
+    background-color: #fff;
+    width: 600px;
+    max-width: calc(100% - 60px);
+    min-height: 300px;
+    padding: 25px 50px 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    z-index: 2;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    margin-bottom: 20px;
 }
  
 .hero.block {
