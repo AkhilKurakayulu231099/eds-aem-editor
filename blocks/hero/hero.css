@@ -12,14 +12,6 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
-.hero-container {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white;
-  padding: 15px;
-  max-width: 80%; /* Adjust width as needed */
-  border-radius: 5px; /* Optional: rounded corners */
-  font-family: Arial, sans-serif; /* Adjust font family */
-}
 
 .hero.block {
   display: flex;
