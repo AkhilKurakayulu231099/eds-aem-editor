@@ -1,7 +1,12 @@
 .block.evidenthometext {
-    background-color: #ccc;
     margin: auto;
 }
 .block.evidenthometext h1{
+    text-align: center;
+}
+.block.evidenthometext h2{
+    text-align: center;
+}
+.block.evidenthometext p{
     text-align: center;
 }
