@@ -1,18 +1,47 @@
-/* Hero Section Wrapper */
+/* Hero Wrapper */
 .hero-wrapper {
   position: relative;
   width: 100%;
-  height: 300px; /* Adjust as needed */
-  background-image: url('/path/to/your/image.jpg'); /* Background image */
-  background-size: cover;
-  background-position: center;
+  height: 300px; /* Adjust to match the image's desired display height */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white; /* Ensures text is readable */
+  overflow: hidden;
 }
  
-/* Overlay effect to darken the background for better readability */
+/* Image Styling */
+.hero-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container properly */
+  position: absolute; /* Allows the image to act as a background */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Image stays beneath the text */
+}
+ 
+/* Text Overlay */
+.hero-wrapper .evidenthomtext-container {
+  position: relative;
+  z-index: 2; /* Text stays above the image */
+  text-align: center;
+  color: white; /* Makes text readable on any background */
+}
+ 
+.hero-wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+ 
+.hero-wrapper p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 800px;
+}
+ 
+/* Optional: Add a dark overlay effect for better readability */
 .hero-wrapper::before {
   content: "";
   position: absolute;
@@ -20,35 +49,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
-  z-index: 1; /* Ensures the overlay is below the text */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
 }
  
-/* Text Content Styling */
-.hero-wrapper h1 {
-  position: relative;
-  font-size: 2.5rem;
-  font-weight: bold;
-  z-index: 2; /* Ensure text is above overlay */
-  margin: 0;
-}
- 
-.hero-wrapper p {
-  position: relative;
-  font-size: 1.2rem;
-  z-index: 2;
-  margin-top: 10px;
-  line-height: 1.5;
-  text-align: center;
-  max-width: 800px;
-}
- 
-/* Responsive Adjustments */
+/* Responsive Styling */
 @media (max-width: 768px) {
-  .hero-wrapper {
-    height: 200px;
-  }
- 
   .hero-wrapper h1 {
     font-size: 2rem;
   }
@@ -56,4 +62,9 @@
   .hero-wrapper p {
     font-size: 1rem;
   }
+ 
+  .hero-wrapper {
+    height: 200px; /* Adjust for smaller devices */
+  }
 }
+has context menu
