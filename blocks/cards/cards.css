@@ -1,4 +1,4 @@
-.cards > ul {
+.cards>ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
   grid-gap: 24px;
 }
 
-.cards > ul > li {
+.cards>ul>li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
 }
@@ -18,17 +18,17 @@
 
 .cards .cards-card-image {
   line-height: 0;
-}
-.cards .cards-card-image {
-  transition: transform 0.3s ease; /* Smooth transition for transformation */
+  transition: transform 0.3s ease;
+  /* Smooth transition for transformation */
 }
 
 /* On hover, the image will scale up (move forward) */
 .cards .cards-card-image:hover {
-  transform: scale(1.1); /* Increases the size to 110% of the original size */
+  transform: scale(1.1);
+  /* Increases the size to 110% of the original size */
 }
 
-.cards > ul > li img {
+.cards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
