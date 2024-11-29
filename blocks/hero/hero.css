@@ -14,12 +14,12 @@
   margin-left: auto;
   margin-right: auto;
   color: white;
-  text-align: center; /* Center the heading */
+  text-align: center;
 }
 
 .hero p {
   color: white;
-  text-align: center; /* Center the paragraph text */
+  text-align: center;
 }
 
 .hero picture {
@@ -36,17 +36,17 @@
   height: 100%;
 }
 
+/* New styles for the text div with a white background and padding */
 .hero .text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white; /* Text color */
-  padding: 20px;
-  text-align: center; /* Center the text */
-  width: 100%; /* Optional: Make the background span the entire width */
-  box-sizing: border-box;
+  position: relative;
+  background-color: white; /* White background for the text */
+  color: black; /* Text color black */
+  padding: 30px; /* Add padding around the text */
+  max-width: 1200px; /* Max width of the text container */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center the text inside the div */
+  z-index: 1; /* Make sure it's above the image */
 }
 
 @media (min-width: 900px) {
