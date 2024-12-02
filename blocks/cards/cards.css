@@ -10,57 +10,26 @@
 .cards>ul>li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
-  position: relative;  /* Set relative positioning for the card */
-}
-
-.cards>ul>li::before {
-  content: "";
-  margin: 0 15px 0 0;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid #005cb9;
-  border-right: 3px solid #005cb9;
-  transition: all 0.3s;
-  transform: rotate(45deg) translate(0px, 0px);
 }
 
 .cards .cards-card-body {
-  padding: 16px;
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-  z-index: 10;
+  margin: 16px;
 }
 
-.cards .cards-card-body .text {
-  margin-top: 8px; /* Add some space between the symbol and the text */
-}
-
-.cards .cards-card-body .text h1 {
-  font-size: 24px;
-  color: #005cb9;
-  margin-bottom: 10px;
-}
-
-.cards .cards-card-body .text p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Image styling */
 .cards .cards-card-image {
-  position: relative; /* Ensure image is below text */
-  margin-top: 16px; /* Add space between the text and the image */
+  line-height: 0;
+  transition: transform 0.3s ease;
+  /* Smooth transition for transformation */
+}
+
+/* On hover, the image will scale up (move forward) */
+.cards .cards-card-image:hover {
+  transform: scale(1.1);
+  /* Increases the size to 110% of the original size */
 }
 
 .cards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-
-/* On hover, the image will scale up (move forward) */
-.cards .cards-card-image:hover img {
-  transform: scale(1.1); /* Increases the size to 110% of the original size */
-  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
