@@ -10,7 +10,7 @@
   width: 100%;  /* Make the image stretch across the full width of the container */
   height: 250px;  /* Maintain aspect ratio */
   display: block; /* Remove any unwanted space below the image */
-  background: url(https://www.evidentscientific.com/styles/evident/data/i/caption.png) left bottom no-repeat;
+  
 }
 
 /* Positioning the text block on the left side of the image */
@@ -26,6 +26,7 @@
   margin-bottom: 20px;
   width: 600px;
   height: 400px;
+  background: url(https://www.evidentscientific.com/styles/evident/data/i/caption.png) left bottom no-repeat;
 }
 
 /* Text styling inside the text block */
