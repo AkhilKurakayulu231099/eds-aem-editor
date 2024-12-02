@@ -29,7 +29,7 @@
 /* Text styling inside the text block */
 .hero-wrapper > .hero > div:nth-of-type(2) h1 {
   font-size: 24px;
-  color: #333;  /* Dark color for the heading */
+  color: #005cb9;  /* Dark color for the heading */
   margin-bottom: 10px;
 }
 
