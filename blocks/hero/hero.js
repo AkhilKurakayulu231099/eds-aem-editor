@@ -10,7 +10,7 @@ export default function decorate(block) {
   const textWrapper = document.createElement('div');
   
   // Move the image and text into the new wrapper divs
-  imageWrapper.appendChild(imageDiv);
+  imageWrapper.appendChild(imageDiv.cloneNode(true)); // Clone the image element to ensure it loads properly
   textWrapper.appendChild(textDiv);
   
   // Clear the original heroWrapper and append the new divs
