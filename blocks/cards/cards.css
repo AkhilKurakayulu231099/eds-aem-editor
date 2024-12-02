@@ -11,6 +11,17 @@
   border: 1px solid #dadada;
   background-color: var(--background-color);
 }
+.cards>ul>li::before {
+  content: "";
+    margin: 0 15px 0 0;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #005cb9;
+    border-right: 3px solid #005cb9;
+    transition: all 0.3s;
+    transform: rotate(45deg) translate(0px, 0px);
+}
 
 .cards .cards-card-body {
   margin: 16px;
