@@ -8,7 +8,7 @@
 /* Image styling */
 .hero-wrapper > .hero > div > div > picture img {
   width: 100%;  /* Make the image stretch across the full width of the container */
-  height: auto;  /* Maintain aspect ratio */
+  height: 250px;  /* Maintain aspect ratio */
   display: block; /* Remove any unwanted space below the image */
 }
 
@@ -19,8 +19,8 @@
   left: 0%;  /* Position the text box 5% from the left of the container */
   background-color: white;  /* Add a white background to the text box */
   padding: 20px;  /* Add padding inside the text box */
-  z-index: 2;  /* Ensure the text is above the image */
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  z-index: 0;  /* Ensure the text is above the image */
+  box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.3);
   font-size: 20px;
   margin-bottom: 20px;
   width: 600px;
