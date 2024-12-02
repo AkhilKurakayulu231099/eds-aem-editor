@@ -25,13 +25,6 @@
         "label": "EVImage"
       },
       {
-        "component": "text",
-        "name": "evtext",
-        "value": "",
-        "label": "EVText",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
         "name": "evrichtext",
         "value": "",
