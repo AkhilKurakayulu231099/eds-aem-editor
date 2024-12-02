@@ -11,7 +11,6 @@
   border: 1px solid #dadada;
   background-color: var(--background-color);
   position: relative;  /* Set relative positioning for the card */
-  overflow: hidden;  /* Ensure child elements stay within bounds */
 }
 
 .cards>ul>li::before {
@@ -27,31 +26,41 @@
 }
 
 .cards .cards-card-body {
-  position: absolute; /* Position the body on top of the image */
-  top: 10px; /* Adjust the vertical position */
-  left: 10px; /* Adjust the horizontal position */
-  right: 10px; /* Add some space on the right */
-  bottom: 10px; /* Add some space at the bottom */
   padding: 16px;
   background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-  z-index: 10;  /* Ensure the text appears above the image */
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for text */
+  z-index: 10;
 }
 
+.cards .cards-card-body .text {
+  margin-top: 8px; /* Add some space between the symbol and the text */
+}
+
+.cards .cards-card-body .text h1 {
+  font-size: 24px;
+  color: #005cb9;
+  margin-bottom: 10px;
+}
+
+.cards .cards-card-body .text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Image styling */
 .cards .cards-card-image {
-  line-height: 0;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 1;  /* Keep the image below the text */
-}
-
-/* On hover, the image will scale up (move forward) */
-.cards .cards-card-image:hover {
-  transform: scale(1.1); /* Increases the size to 110% of the original size */
+  position: relative; /* Ensure image is below text */
+  margin-top: 16px; /* Add space between the text and the image */
 }
 
 .cards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* On hover, the image will scale up (move forward) */
+.cards .cards-card-image:hover img {
+  transform: scale(1.1); /* Increases the size to 110% of the original size */
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
