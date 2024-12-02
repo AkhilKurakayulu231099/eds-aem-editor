@@ -14,16 +14,17 @@
 
 /* Positioning the text block over the image */
 .hero-wrapper > .hero > div:nth-of-type(2) {
-  position: absolute;  /* This positions the text div */
-  top: 50%;  /* Center vertically */
-  left: 50%;  /* Center horizontally */
-  transform: translate(-50%, -50%);  /* Adjust for proper centering */
-  background-color: white;  /* Add a white background with slight transparency */
+  position: relative;  /* Default positioning */
+  top: auto;  /* Reset top to auto */
+  left: 10%;  /* Position the text box from the left */
+  transform: none;  /* Remove the transform property */
+  background-color: white;  /* White background for the text box */
   padding: 20px;  /* Add padding inside the text box */
-  z-index: 10;  /* Ensure text is on top of the image */
+  z-index: 10;  /* Ensure text is above the image */
   width: 80%;  /* Limit the width of the text box */
   max-width: 600px;  /* Optional: limit the maximum width */
   border-radius: 8px;  /* Optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional: add a subtle shadow */
 }
 
 /* Text styling inside the text block */
@@ -37,6 +38,13 @@
   font-size: 16px;
   color: #555;  /* Slightly lighter color for paragraph text */
   line-height: 1.6;  /* Increase line height for better readability */
+}
+
+/* Sticky positioning for the text block */
+.hero-wrapper > .hero > div:nth-of-type(2) {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 20px;  /* Distance from the top of the screen */
 }
 
 /* Make it responsive */
