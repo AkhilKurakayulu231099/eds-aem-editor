@@ -19,7 +19,7 @@
   left: 0%;  /* Position the text box 5% from the left of the container */
   background-color: white;  /* Add a white background to the text box */
   padding: 20px;  /* Add padding inside the text box */
-  z-index: 10;  /* Ensure the text is above the image */
+  z-index: 0;  /* Ensure the text is above the image */
   width: 30%;  /* Set the width of the text box */
   max-width: 400px;  /* Optional: limit the maximum width */
   border-radius: 8px;  /* Optional: rounded corners */
