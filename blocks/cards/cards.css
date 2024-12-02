@@ -15,7 +15,7 @@
 }
 
 /* Add the arrow effect */
-.cards>ul>li::before {
+.cards-card-body::before {
   content: "";
     margin: 0 15px 0 0;
     display: inline-block;
