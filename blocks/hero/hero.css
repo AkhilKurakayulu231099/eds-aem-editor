@@ -15,16 +15,16 @@
 /* Positioning the text block on the left side of the image */
 .hero-wrapper > .hero > div:nth-of-type(2) {
   position: absolute;  /* Position the text div absolutely within the hero-wrapper */
-  top: 0%;  /* Position the text box 20% down from the top of the container */
-  left: 0%;  /* Position the text box 5% from the left of the container */
+  top: 20%;  /* Move the text box 20% down from the top of the container, change this to push text box further down */
+  left: 0%;  /* Position the text box at the left of the container */
   background-color: white;  /* Add a white background to the text box */
   padding: 20px;  /* Add padding inside the text box */
   z-index: 2;  /* Ensure the text is above the image */
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   font-size: 20px;
   margin-bottom: 20px;
-  width: 600px;
-  height: 400px;
+  width: 600px;  /* Set the width of the text box */
+  height: 400px;  /* Set the height of the text box */
 }
 
 /* Text styling inside the text block */
