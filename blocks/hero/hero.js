@@ -1,26 +1,27 @@
 export default function decorate(block) {
   // Iterate through each row (div) inside the block
   [...block.children].forEach((row) => {
-    // Check if the first child is the image div
-    const imageDiv = row.querySelector('.image-wrapper'); // Look for the image wrapper div
-    const textDiv = row.querySelector('[data-aue-prop="text"]'); // The second div should be the text content
-    
-    // Process the text div if found
-    if (textDiv) {
-      // Create a wrapper div for the text content
-      const textWrapper = document.createElement('div');
-      textWrapper.classList.add('text-wrapper');  // Add class for styling
+    // Check if the row contains the image wrapper
+    const imageDiv = row.querySelector('.image-wrapper');
+    const textDiv = row.querySelector('[data-aue-prop="text"]'); // The div with text
 
-      // Append the content of textDiv inside the wrapper
+    // If the text div is found, wrap it inside a text-wrapper
+    if (textDiv) {
+      // Create a new div wrapper for the text
+      const textWrapper = document.createElement('div');
+      textWrapper.classList.add('text-wrapper');  // Add the class for styling
+
+      // Move the content from the text div to the new text wrapper
       textWrapper.append(...textDiv.childNodes);
 
-      // Replace the original text div with the new textWrapper
+      // Replace the original text div with the text wrapper
       row.replaceChild(textWrapper, textDiv);
     }
 
-    // Optional: Handle the image div (no need to wrap it, just ensure the class is added)
+    // If the image div is found, we just make sure it stays intact
     if (imageDiv) {
-      imageDiv.classList.add('image-wrapper'); // Ensure it has the class
+      // Ensure that the image div has the class 'image-wrapper'
+      imageDiv.classList.add('image-wrapper');
     }
   });
 }
