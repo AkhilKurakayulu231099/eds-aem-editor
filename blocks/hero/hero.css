@@ -15,8 +15,8 @@
 /* Positioning the text block on the left side of the image */
 .hero-wrapper > .hero > div:nth-of-type(2) {
   position: absolute;  /* Position the text div absolutely within the hero-wrapper */
-  top: 20%;  /* Position the text box 20% down from the top of the container */
-  left: 5%;  /* Position the text box 5% from the left of the container */
+  top: 0%;  /* Position the text box 20% down from the top of the container */
+  left: 0%;  /* Position the text box 5% from the left of the container */
   background-color: white;  /* Add a white background to the text box */
   padding: 20px;  /* Add padding inside the text box */
   z-index: 10;  /* Ensure the text is above the image */
