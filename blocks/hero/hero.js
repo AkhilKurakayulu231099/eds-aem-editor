@@ -7,7 +7,7 @@ export default function decorate(block) {
 
   // Ensure divs exist for both image and text
   const imageDiv = divs[0]; // The first div should be the image container
-  const textDiv = divs[1];   // The second div should be the text container
+  const textDiv = divs[1] ? divs[1].querySelector('[data-aue-prop="text"]') : null;   // Select text content from the second div
 
   // Create new wrapper divs for image and text
   const imageWrapper = document.createElement('div');
