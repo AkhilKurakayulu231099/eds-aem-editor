@@ -10,33 +10,44 @@
 .cards>ul>li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  position: relative;  /* Set relative positioning for the card */
+  overflow: hidden;  /* Ensure child elements stay within bounds */
 }
+
 .cards>ul>li::before {
   content: "";
-    margin: 0 15px 0 0;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-top: 3px solid #005cb9;
-    border-right: 3px solid #005cb9;
-    transition: all 0.3s;
-    transform: rotate(45deg) translate(0px, 0px);
+  margin: 0 15px 0 0;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #005cb9;
+  border-right: 3px solid #005cb9;
+  transition: all 0.3s;
+  transform: rotate(45deg) translate(0px, 0px);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  position: absolute; /* Position the body on top of the image */
+  top: 10px; /* Adjust the vertical position */
+  left: 10px; /* Adjust the horizontal position */
+  right: 10px; /* Add some space on the right */
+  bottom: 10px; /* Add some space at the bottom */
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  z-index: 10;  /* Ensure the text appears above the image */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for text */
 }
 
 .cards .cards-card-image {
   line-height: 0;
   transition: transform 0.3s ease;
-  /* Smooth transition for transformation */
+  position: relative;
+  z-index: 1;  /* Keep the image below the text */
 }
 
 /* On hover, the image will scale up (move forward) */
 .cards .cards-card-image:hover {
-  transform: scale(1.1);
-  /* Increases the size to 110% of the original size */
+  transform: scale(1.1); /* Increases the size to 110% of the original size */
 }
 
 .cards>ul>li img {
