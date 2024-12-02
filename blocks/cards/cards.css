@@ -16,16 +16,15 @@
 
 /* Add the arrow effect */
 .cards>ul>li::before {
-  content: ''; /* Create an empty element */
-  position: absolute;
-  top: 0; /* Position it at the top of the card */
-  left: 0; /* Align it to the left */
-  width: 0; /* Set width of the arrow */
-  height: 0; /* Set height of the arrow */
-  border-top: 3px solid #005cb9; /* Top border for the arrow */
-  border-right: 3px solid #005cb9; /* Right border for the arrow */
-  transform: rotate(45deg); /* Rotate it to form an arrow */
-  transition: all 0.3s ease; /* Smooth transition for transform */
+  content: "";
+    margin: 0 15px 0 0;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #005cb9;
+    border-right: 3px solid #005cb9;
+    transition: all 0.3s;
+    transform: rotate(45deg) translate(0px, 0px);
 }
 
 /* Hover effect: Arrow will scale up slightly */
