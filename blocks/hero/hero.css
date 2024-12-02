@@ -14,17 +14,16 @@
 
 /* Positioning the text block over the image */
 .hero-wrapper > .hero > div:nth-of-type(2) {
-    background-color: #fff;
-    max-width: calc(100% - 60px);
-    min-height: 300px;
-    padding: 25px 50px 50px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    z-index: 2;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
-    font-size: 20px;
-    margin-bottom: 20px;
+  position: absolute;  /* This positions the text div */
+  top: 50%;  /* Center vertically */
+  left: 50%;  /* Center horizontally */
+  transform: translate(-50%, -50%);  /* Adjust for proper centering */
+  background-color: white;  /* Add a white background with slight transparency */
+  padding: 20px;  /* Add padding inside the text box */
+  z-index: 10;  /* Ensure text is on top of the image */
+  width: 80%;  /* Limit the width of the text box */
+  max-width: 600px;  /* Optional: limit the maximum width */
+  border-radius: 8px;  /* Optional: rounded corners */
 }
 
 /* Text styling inside the text block */
