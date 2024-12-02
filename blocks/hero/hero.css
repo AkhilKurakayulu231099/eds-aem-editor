@@ -1,62 +1,63 @@
-/* Container for the image and text */
+/* Ensure the parent container has relative positioning */
 .hero-wrapper {
-  position: relative; /* Make it a positioning context for absolute elements */
-  max-width: 100%;
-  overflow: hidden; /* Ensure the text doesn't overflow outside the container */
+  position: relative; /* Creates a positioning context for the absolute child elements */
+  width: 100%;
+  overflow: hidden; /* Prevent overflow outside the container */
 }
 
-/* Styling for the image-wrapper */
+/* Image wrapper settings */
 .image-wrapper {
-  position: relative; /* Make sure the image stays in its container */
-  width: 100%; /* Ensure the image takes up the full width of the parent */
+  position: relative; /* Ensure image is positioned within its container */
+  width: 100%;
+  height: auto;
 }
 
 .image-wrapper picture img {
-  width: 100%; /* Ensure the image is responsive */
-  height: auto; /* Maintain the aspect ratio */
+  width: 100%; /* Ensure the image takes up the full width */
+  height: auto; /* Maintain aspect ratio */
   display: block; /* Prevent extra space below the image */
 }
 
-/* Styling for the text-wrapper */
+/* Position the text on top of the image */
 .text-wrapper {
-  position: absolute; /* Position it on top of the image */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Exactly center the text box */
-  background-color: white; /* White background to make the text stand out */
-  padding: 20px; /* Padding inside the text box */
-  max-width: 80%; /* Limit the width of the text box */
+  position: absolute; /* This will place the text box on top of the image */
+  top: 50%; /* Vertically center the text box */
+  left: 50%; /* Horizontally center the text box */
+  transform: translate(-50%, -50%); /* Correct the centering to exactly the middle */
+  background-color: rgba(255, 255, 255, 0.7); /* White background with slight transparency */
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
-  z-index: 10; /* Ensure it appears above the image */
-  border-radius: 8px; /* Optional: round the corners of the text box */
-  opacity: 0.9; /* Optional: make the background slightly transparent */
-  color: #333; /* Text color */
+  z-index: 10; /* Make sure the text appears above the image */
+  width: 80%; /* Limit the width of the text box */
+  max-width: 600px; /* Optional: you can limit the max width for better control */
+  border-radius: 8px; /* Rounded corners */
 }
 
-/* Additional text styling */
+/* Text styling */
 .text-wrapper h1 {
   font-size: 24px; /* Heading font size */
+  color: #333; /* Dark text color */
   margin-bottom: 10px;
 }
 
 .text-wrapper p {
   font-size: 16px; /* Paragraph font size */
-  line-height: 1.6; /* Line height for readability */
   color: #555; /* Lighter text color */
+  line-height: 1.6; /* Line height for readability */
 }
 
 /* Optional: Add responsiveness for smaller screens */
 @media (max-width: 768px) {
   .text-wrapper {
-    max-width: 90%; /* Make the text box take up more space on smaller screens */
-    padding: 15px; /* Adjust padding */
+    width: 90%; /* Make text box wider on smaller screens */
+    padding: 15px;
   }
 
   .text-wrapper h1 {
-    font-size: 20px; /* Adjust heading font size */
+    font-size: 20px; /* Adjust heading size for mobile */
   }
 
   .text-wrapper p {
-    font-size: 14px; /* Adjust paragraph font size */
+    font-size: 14px; /* Adjust paragraph font size for mobile */
   }
 }
