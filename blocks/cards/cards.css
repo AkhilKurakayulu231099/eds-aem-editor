@@ -10,34 +10,12 @@
 .cards>ul>li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
-  position: relative; /* For positioning the pseudo-element */
-  padding: 16px; /* Add padding to the card */
 }
 
-/* Add the arrow effect */
-.cards-card-body::before {
-  content: "";
-    margin: 0 15px 0 0;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-top: 3px solid #005cb9;
-    border-right: 3px solid #005cb9;
-    transition: all 0.3s;
-    transform: rotate(45deg) translate(0px, 0px);
-}
-
-/* Hover effect: Arrow will scale up slightly */
-.cards>ul>li:hover::before {
-  transform: rotate(45deg) translate(5px, 5px); /* Slight movement on hover */
-}
-
-/* Text inside the card */
 .cards .cards-card-body {
   margin: 16px;
 }
 
-/* Image styling and hover effect */
 .cards .cards-card-image {
   line-height: 0;
   transition: transform 0.3s ease;
