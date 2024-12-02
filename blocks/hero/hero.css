@@ -22,7 +22,9 @@
   z-index: 0;  /* Ensure the text is above the image */
   width: 30%;  /* Set the width of the text box */
   max-width: 400px;  /* Optional: limit the maximum width */
-  border-radius: 8px;  /* Optional: rounded corners */
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 /* Text styling inside the text block */
