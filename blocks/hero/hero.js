@@ -1,32 +1,44 @@
 export default function decorate(block) {
-  // Select the hero-wrapper div (the main block)
-  const [heroWrapper] = block.children;
+  // Select all the children of the first element (assuming the structure is consistent)
+  const divs = [...block.firstElementChild.children];
 
-  // Select all direct divs inside the heroWrapper
-  const divs = heroWrapper.querySelectorAll('div > div');
-
-  // Log the divs to see what they contain
+  // Log the divs for debugging
   console.log('Divs inside hero-wrapper:', divs);
 
-  // Check if the second div exists (for text content)
-  const textDiv = divs[1]; // We expect the second div to contain the text
+  // Add a class based on the number of child divs
+  block.classList.add(`columns-${divs.length}-cols`);
 
-  // Log the content of textDiv to ensure it contains the text content
+  // Look for the second div, which we assume to be the text container
+  const textDiv = divs[1];  // Assuming second div contains the text content
+
+  // Log the content of the text div
   console.log('Text Div:', textDiv);
 
-  // Create a new wrapper for text content
-  const textWrapper = document.createElement('div');
-
-  // Check if textDiv exists and contains the expected content
   if (textDiv) {
-    // Log the contents of textDiv to check if it's correct
-    console.log('Text content in textDiv:', textDiv.innerHTML);
-
-    // We can either append the entire text div or extract specific content
+    // Create a new wrapper div for the text content
+    const textWrapper = document.createElement('div');
     textWrapper.classList.add('text-wrapper');  // Add class for styling
-    textWrapper.appendChild(textDiv);  // Move the entire text div into the wrapper
-    heroWrapper.appendChild(textWrapper);  // Append the text wrapper to the heroWrapper
+    
+    // Move the entire text div into the new wrapper
+    textWrapper.appendChild(textDiv);
+
+    // Append the new wrapper to the hero-wrapper
+    block.appendChild(textWrapper);
   } else {
-    console.log("No text div found."); // Log if text div is missing
+    console.log("No text div found.");
   }
+
+  // Setup image columns: We can check if any div contains an image (optional)
+  [...block.children].forEach((row) => {
+    [...row.children].forEach((col) => {
+      const pic = col.querySelector('picture');
+      if (pic) {
+        const picWrapper = pic.closest('div');
+        if (picWrapper && picWrapper.children.length === 1) {
+          // If the picture is the only content in the column, mark it as an image column
+          picWrapper.classList.add('columns-img-col');
+        }
+      }
+    });
+  });
 }
