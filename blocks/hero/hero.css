@@ -14,7 +14,6 @@
 
 /* Positioning the text block on the left side of the image */
 .hero-wrapper > .hero > div:nth-of-type(2) {
-  position: absolute;  /* Position the text div absolutely within the hero-wrapper */
   top: 20%;  /* Move the text box 20% down from the top of the container, change this to push text box further down */
   left: 0%;  /* Position the text box at the left of the container */
   background-color: white;  /* Add a white background to the text box */
