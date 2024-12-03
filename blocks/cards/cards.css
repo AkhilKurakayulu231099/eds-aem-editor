@@ -33,25 +33,3 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
-.cards-card-body a {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Add focus effect on the link text when the image is clicked */
-.cards-card-image img:focus + .cards-card-body a {
-    background-color: rgba(0, 0, 0, 0.1); /* Optional background color when clicked */
-    outline: none; /* Remove default outline */
-}
-
-/* Add active state for the clicked image */
-.cards-card-image img:active {
-    transform: scale(1.05); /* Slightly scale down on active click */
-}
-
-/* Ensure the link text gets selected on click */
-.cards-card-body a:active {
-    color: #0066cc; /* Change text color on active (clicked) state */
-}
-
