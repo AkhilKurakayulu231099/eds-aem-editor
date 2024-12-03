@@ -14,11 +14,22 @@ export default function decorate(block) {
     });
     ul.append(li);
   });
+
+  // Replace the image with an optimized version
   ul.querySelectorAll('picture > img').forEach((img) => {
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
+
+    // Add click functionality to the image
+    const link = img.closest('.cards-card-body').querySelector('a');
+    if (link) {
+      img.addEventListener('click', () => {
+        window.location.href = link.href; // Navigate to the link when the image is clicked
+      });
+    }
   });
+
   block.textContent = '';
   block.append(ul);
 }
