@@ -1,33 +1,38 @@
-/* Zoom effect on the image when hovering over the card */
-.cards-card-image img {
-    transition: transform 0.3s ease, filter 0.3s ease;
+.cards>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
 }
 
-/* Zoom in effect on hover */
-.cards-card-image:hover img {
-    transform: scale(1.1); /* Adjust the scale to zoom the image */
-    filter: brightness(1.1); /* Optionally brighten the image during hover */
+.cards>ul>li {
+  border: 1px solid #dadada;
+  background-color: var(--background-color);
 }
 
-/* Style for the text link to highlight when clicking */
-.cards-card-body a {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
+.cards .cards-card-body {
+  margin: 16px;
 }
 
-/* Add focus effect on the link text when the image is clicked */
-.cards-card-image img:focus + .cards-card-body a {
-    background-color: rgba(0, 0, 0, 0.1); /* Optional background color when clicked */
-    outline: none; /* Remove default outline */
+.cards .cards-card-image {
+  line-height: 0;
+  transition: transform 0.3s ease;
+  /* Smooth transition for transformation */
 }
 
-/* Add active state for the clicked image */
-.cards-card-image img:active {
-    transform: scale(1.05); /* Slightly scale down on active click */
+/* On hover, the image will scale up (move forward) */
+.cards .cards-card-image:hover {
+  transform: scale(1.1);
+  /* Increases the size to 110% of the original size */
 }
 
-/* Ensure the link text gets selected on click */
+.cards>ul>li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
 .cards-card-body a:active {
     color: #0066cc; /* Change text color on active (clicked) state */
 }
