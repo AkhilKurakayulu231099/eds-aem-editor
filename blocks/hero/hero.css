@@ -22,7 +22,7 @@
   z-index: 0;  /* Ensure the text is above the image */
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   width: 600px;
   height: 400px;
 }
