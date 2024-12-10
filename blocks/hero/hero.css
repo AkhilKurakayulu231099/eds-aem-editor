@@ -10,7 +10,7 @@
 .hero-wrapper > .hero > div > div > picture img {
   width: 100%;  /* Make the image stretch across the full width of the container */
   height: 250px;  /* Maintain aspect ratio */
-  display: block; /* Remove any unwanted space below the image */
+  display: flex; /* Remove any unwanted space below the image */
 }
 
 /* Positioning the text block on the left side of the image */
