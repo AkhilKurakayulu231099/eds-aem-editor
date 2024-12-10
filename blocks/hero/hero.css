@@ -9,7 +9,7 @@
 /* Image styling */
 .hero-wrapper > .hero > div > div > picture img {
   width: 100%;  /* Make the image stretch across the full width of the container */
-  height: 150px;  /* Maintain aspect ratio */
+  height: 250px;  /* Maintain aspect ratio */
   display: block; /* Remove any unwanted space below the image */
 }
 
