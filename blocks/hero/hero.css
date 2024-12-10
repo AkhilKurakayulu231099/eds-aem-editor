@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden; /* Hide anything overflowing outside */
   height: 300px;
+  max-width: 100%;
 }
 
 /* Image styling */
