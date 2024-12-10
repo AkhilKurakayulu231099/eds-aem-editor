@@ -3,12 +3,13 @@
   position: relative;
   width: 100%;
   overflow: hidden; /* Hide anything overflowing outside */
+  height: 500px;
 }
 
 /* Image styling */
 .hero-wrapper > .hero > div > div > picture img {
   width: 100%;  /* Make the image stretch across the full width of the container */
-  height: auto;  /* Maintain aspect ratio */
+  height: 350px;  /* Maintain aspect ratio */
   display: block; /* Remove any unwanted space below the image */
 }
 
@@ -24,7 +25,7 @@
   font-size: 20px;
   margin-bottom: 100px;
   width: 500px;
-  height: 300px;
+  height: 500px;
 }
 
 /* Text styling inside the text block */
