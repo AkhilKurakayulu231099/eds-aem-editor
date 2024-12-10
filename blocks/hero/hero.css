@@ -27,6 +27,7 @@
   width: 600px;
   height: 200px;
   padding: 25px 50px 50px;
+  justify-content: flex-end;
 }
 
 /* Text styling inside the text block */
