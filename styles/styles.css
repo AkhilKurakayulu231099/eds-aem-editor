@@ -23,7 +23,7 @@
                 --page-loader-load-bg: rgba(255,255,255,1);
                 --page-loader-load-timeout: 8000;
                 --page-loader-unload-bg: rgba(255,255,255,0.5);
-                --page-loader-unload-timeout: 8000
+                --page-loader-unload-timeout: 8000;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
