@@ -33,3 +33,7 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+.cards {
+    width: 1270px;
+    padding: 0 15px;
+}
