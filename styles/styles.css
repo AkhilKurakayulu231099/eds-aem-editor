@@ -18,6 +18,12 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+    --page-loader-icon: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20display%3D%27block%27%20preserveAspectRatio%3D%27xMidYMid%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2732%27%20fill%3D%27none%27%20stroke%3D%27%23777%27%20stroke-dasharray%3D%2750%2050%27%20stroke-linecap%3D%27round%27%20stroke-width%3D%278%27%3E%3CanimateTransform%20attributeName%3D%27transform%27%20dur%3D%271s%27%20keyTimes%3D%270%3B1%27%20repeatCount%3D%27indefinite%27%20type%3D%27rotate%27%20values%3D%270%2050%2050%3B360%2050%2050%27%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E%0A");
+                --page-loader-size: clamp(64px,20vmin,128px);
+                --page-loader-load-bg: rgba(255,255,255,1);
+                --page-loader-load-timeout: 8000;
+                --page-loader-unload-bg: rgba(255,255,255,0.5);
+                --page-loader-unload-timeout: 8000
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -230,12 +236,6 @@ main img {
 /* sections */
 main > .section {
   margin: 40px 0;
---page-loader-icon: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20display%3D%27block%27%20preserveAspectRatio%3D%27xMidYMid%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2732%27%20fill%3D%27none%27%20stroke%3D%27%23777%27%20stroke-dasharray%3D%2750%2050%27%20stroke-linecap%3D%27round%27%20stroke-width%3D%278%27%3E%3CanimateTransform%20attributeName%3D%27transform%27%20dur%3D%271s%27%20keyTimes%3D%270%3B1%27%20repeatCount%3D%27indefinite%27%20type%3D%27rotate%27%20values%3D%270%2050%2050%3B360%2050%2050%27%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E%0A");
-                --page-loader-size: clamp(64px,20vmin,128px);
-                --page-loader-load-bg: rgba(255,255,255,1);
-                --page-loader-load-timeout: 8000;
-                --page-loader-unload-bg: rgba(255,255,255,0.5);
-                --page-loader-unload-timeout: 8000
 }
 
 main > .section > div {
