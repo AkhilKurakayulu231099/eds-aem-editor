@@ -16,6 +16,7 @@
 /* Positioning the text block on the left side of the image */
 .hero-wrapper > .hero > div:nth-of-type(2) {
   position: absolute;
+  display: flex;
   top: 0%;
   left: 0%;
   background-color: white;
