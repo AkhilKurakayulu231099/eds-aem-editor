@@ -14,6 +14,7 @@
 
 .cards .cards-card-body {
   margin: 16px;
+  color: black;
 }
 
 .cards .cards-card-image {
@@ -25,6 +26,10 @@
 /* On hover, the image will scale up (move forward) */
 .cards .cards-card-image:hover {
   transform: scale(1.1);
+  /* Increases the size to 110% of the original size */
+}
+.cards .cards-card-body:hover {
+  color: blue;
   /* Increases the size to 110% of the original size */
 }
 
