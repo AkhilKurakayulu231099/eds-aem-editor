@@ -114,7 +114,7 @@
         "label": "Link"
       },
       {
-        "component": "reference",
+        "component": "text",
         "name": "linkText",
         "label": "Text"
       },
