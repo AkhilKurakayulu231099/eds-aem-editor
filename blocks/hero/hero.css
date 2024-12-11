@@ -45,7 +45,7 @@
   line-height: 1.8em;
 }
 
-/* Make it responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-wrapper > .hero > div:nth-of-type(2) {
     width: 80%;
