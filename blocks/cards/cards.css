@@ -36,4 +36,6 @@
 .cards {
     width: 1270px;
     padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
