@@ -18,6 +18,27 @@ footer .footer p {
   line-height: 1.8em;
 }
 
+.footer ul li {
+	margin: 20px 0 0;
+}
+.footer ul li {
+	margin: 0 15px;
+}
+.footer ul span {
+	display: none;
+}
+.footer ul a {
+	background: var() no-repeat -475px 0;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+.footer ul a[href*="twitter"] {background-position: -475px 0;}
+.footer ul a[href*="facebook"] {background-position: -450px 0;}
+.footer ul a[href*="instagram"] {background-position: -425px 0;}
+.footer ul a[href*="linkedin"] {background-position: -400px 0;}
+.footer ul a[href*="youtube"] {background-position: -375px 0;}
+
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
