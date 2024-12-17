@@ -18,7 +18,7 @@ footer .footer p {
   line-height: 1.8em;
 }
 
-.footer ul {
+.footer ul picture {
     display: flex;
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Vertically center the items */
