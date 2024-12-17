@@ -28,7 +28,7 @@ footer .footer p {
 }
 
 .footer picture{
-	position: absolute;
+	position: relative;
     right: 15px;
     top: 0;
 }
