@@ -34,7 +34,7 @@ footer .footer p {
 	width: 25px;
 	height: 25px;
 	text-decoration: none;
-	visibility: hidden;
+	font-size: 0;
 }
 .footer ul a[href*="twitter"] {background-position: -475px 0;}
 .footer ul a[href*="facebook"] {background-position: -450px 0;}
