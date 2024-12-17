@@ -23,6 +23,7 @@ footer .footer p {
 }
 .footer ul li {
 	margin: 0 15px;
+	list-style-type: none;
 }
 .footer ul span {
 	display: none;
