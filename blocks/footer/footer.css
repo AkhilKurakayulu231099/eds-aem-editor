@@ -28,7 +28,7 @@ footer .footer p {
 	display: none;
 }
 .footer ul a {
-	background: var() no-repeat -475px 0;
+	background: var(--sprite) no-repeat -475px 0;
 	display: inline-block;
 	width: 25px;
 	height: 25px;
