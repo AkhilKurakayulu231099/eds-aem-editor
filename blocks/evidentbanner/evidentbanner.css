@@ -3,8 +3,6 @@
   display: block; /* Ensure the image is displayed */
   cursor: pointer; /* Make the image clickable */
 }
-
-
 .evidentbanner p {
     display: none;
 }
