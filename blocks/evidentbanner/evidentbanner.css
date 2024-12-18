@@ -2,11 +2,12 @@
 .evidentbanner-wrapper img {
   display: block; /* Ensure the image is displayed */
   cursor: pointer; /* Make the image clickable */
-  width: 100%; /* Optional: Make image responsive */
-  height: auto; /* Maintain aspect ratio */
 }
 
 /* Hide all other content in the wrapper except the image */
 .evidentbanner-wrapper > div:not(img) {
   display: none; /* Hide everything else except the image */
+}
+.evidentbanner p {
+    display: block;
 }
