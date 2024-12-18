@@ -1,17 +1,24 @@
 export default function decorate(block) {
-  // Find the first image inside the block
+  // Find the image inside the block
   const img = block.querySelector('img');
+  
+  // Find the anchor tag inside the block that contains the URL
+  const anchor = block.querySelector('a');
 
-  // Check if the image exists
-  if (img) {
-    // Set cursor to pointer to make it clickable
-    img.style.cursor = 'pointer';
+  if (img && anchor) {
+    // Make the image clickable, pointing to the anchor's href
+    img.style.cursor = 'pointer'; // Change cursor to pointer on hover
 
-    // Add click event to the image to redirect
+    // Add a click event to the image to redirect to the URL in the anchor
     img.addEventListener('click', () => {
-      window.location.href = 'https://www.evidentscientific.com/en/'; // URL you want to redirect to
+      window.location.href = anchor.href; // Redirect to the URL
     });
+
+    // Clear all content inside the block and append only the image
+    block.innerHTML = ''; // Remove all content inside the block
+    block.appendChild(img); // Append only the image
   } else {
-    console.error('No image found in the block');
+    // If no image or anchor is found, clear the block
+    block.innerHTML = ''; // Clear the block if no image or anchor is found
   }
 }
