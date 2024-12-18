@@ -4,10 +4,7 @@
   cursor: pointer; /* Make the image clickable */
 }
 
-/* Hide all other content in the wrapper except the image */
-.evidentbanner-wrapper > div:not(img) {
-  display: none; /* Hide everything else except the image */
-}
+
 .evidentbanner p {
-    display: block;
+    display: none;
 }
