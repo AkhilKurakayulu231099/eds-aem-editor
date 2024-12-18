@@ -35,17 +35,17 @@
     "id": "evidentcards",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "evimage",
-        "label": "EVImage"
-      },
-      {
         "component": "richtext",
         "name": "evrichtext",
         "value": "",
         "label": "EVRichText",
         "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "evimage",
+        "label": "EVImage"
       }
     ]
   },
