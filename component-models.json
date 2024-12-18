@@ -16,6 +16,22 @@
     ]
   },
   {
+    "id": "evidentbanner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Banner Url"
+      }
+    ]
+  },
+  {
     "id": "evidentcards",
     "fields": [
       {
