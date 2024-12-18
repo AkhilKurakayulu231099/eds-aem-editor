@@ -4,6 +4,8 @@ export default function decorate(block) {
   
   // Find the anchor tag inside the block that contains the URL
   const anchor = block.querySelector('a');
+  console.log(img);
+  console.log(a);
 
   if (img && anchor) {
     // Make the image clickable, pointing to the anchor's href
