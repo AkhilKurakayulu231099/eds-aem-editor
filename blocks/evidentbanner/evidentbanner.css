@@ -1,20 +1,15 @@
-
-/* Hide everything except the image */
-.evidentbanner-wrapper div {
-    display: none; /* Hide all divs */
+/* Hide all content except the image */
+.evidentbanner-wrapper > div:not(:has(img)) {
+    display: none; /* Hide divs that don't contain an img */
 }
 
-/* Show only the div containing the image */
-.evidentbanner-wrapper div img {
-    display: block;
+/* Make the image clickable by ensuring the anchor (a) is also visible */
+.evidentbanner-wrapper img {
+    pointer-events: all; /* Ensure the image is clickable */
+    cursor: pointer; /* Change the cursor to indicate the image is clickable */
 }
 
-/* Make the image clickable */
-.evidentbanner-wrapper div img {
-    pointer-events: all; /* Enable click on image */
-}
-
-/* Remove the URL link (optional) */
+/* Hide the text link, leaving only the image */
 .evidentbanner-wrapper div p {
-    display: none; /* Hide the paragraph with the link */
+    display: none; /* Hide the text link in paragraph */
 }
