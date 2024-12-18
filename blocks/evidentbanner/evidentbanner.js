@@ -6,6 +6,7 @@ export default function decorate(block) {
   if (img) {
     // Find the anchor (<a>) tag wrapping the image
     const anchor = img.closest('a');
+    console.log(a);
 
     if (anchor) {
       // Make the image clickable and redirect to the anchor's href
