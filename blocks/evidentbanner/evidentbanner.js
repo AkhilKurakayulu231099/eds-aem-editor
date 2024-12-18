@@ -1,7 +1,7 @@
 export default function decorate(block) {
   // Find the image inside the block
   const img = block.querySelector('img');
-  console.log(img):
+  console.log(img);
 
   if (img) {
     // Find the anchor (<a>) tag wrapping the image
