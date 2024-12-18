@@ -1,11 +1,11 @@
-/* Hide everything except the image inside the wrapper */
+/* Hide all divs inside .evidentbanner-wrapper */
 .evidentbanner-wrapper > div {
-  display: none; /* Hide all div elements */
+  display: none; /* Hide all divs and content except the image */
 }
 
-/* Show the image */
+/* Ensure the image is visible and clickable */
 .evidentbanner-wrapper img {
-  display: block; /* Ensure the image is visible */
-  pointer-events: all; /* Make the image clickable */
-  cursor: pointer; /* Change cursor to indicate the image is clickable */
+  display: block; /* Ensure the image is displayed */
+  pointer-events: all; /* Allow clicks on the image */
+  cursor: pointer; /* Indicate the image is clickable */
 }
