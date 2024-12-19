@@ -36,16 +36,21 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "evrichtext",
+        "name": "evidentcardheader",
         "value": "",
-        "label": "EVRichText",
+        "label": "Evident Card Header",
         "valueType": "string"
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "evimage",
-        "label": "EVImage"
+        "name": "evidentcardimage",
+        "label": "Evident Card Image"
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Evident Card Url"
       }
     ]
   },
