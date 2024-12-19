@@ -1,14 +1,11 @@
-
 /* Style the wrapper around the evident cards */
 .evidentcards-wrapper {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust columns based on available space */
+  gap: 20px; /* Space between cards */
   margin: 0 auto; /* Center the wrapper */
-  padding: 20px; /* Add padding around the block */
-  max-width: 1200px; /* Set a max-width for the wrapper */
-  display: flex; /* Flexbox for easy alignment */
-  justify-content: center; /* Center the block horizontally */
-  flex-direction: column;
-  align-items: center; /* Align elements in the center */
-  text-align: center; /* Center text */
+  padding: 20px; /* Padding around the block */
+  max-width: 1200px; /* Max-width for the wrapper */
 }
 
 /* Style the evident card block */
@@ -19,15 +16,15 @@
   overflow: hidden; /* Ensure content doesn't overflow */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
   padding: 20px;
-  width: 100%;
-  max-width: 800px; /* Set a max width for the component */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  border-top: 4px solid transparent; /* Top border for whole component */
 }
 
-/* Hover effect for the evident card block */
+/* Blue top border for the whole component when hovered */
 .evidentcards.block:hover {
   transform: scale(1.03); /* Slight zoom effect */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  border-top: 4px solid #007bff; /* Blue top border when hovered */
 }
 
 /* Style the h6 element */
@@ -37,13 +34,27 @@
   margin-bottom: 15px; /* Add space below the heading */
   color: #333; /* Dark text color */
   cursor: pointer; /* Pointer cursor on hover */
-  text-decoration: underline; /* Underline the heading */
   transition: color 0.3s ease; /* Smooth color change on hover */
+  display: flex;
+  align-items: center; /* Center text and arrow vertically */
 }
 
-/* Hover effect for h6 element */
+/* Add an arrow symbol before the text using ::before pseudo-element */
+.evidentcards.block h6::before {
+  content: '→'; /* Unicode arrow symbol */
+  margin-right: 10px; /* Space between the arrow and text */
+  font-size: 1.2rem; /* Arrow size */
+  color: #333; /* Default arrow color (same as text) */
+}
+
+/* Hover effect for h6 element (text and arrow turn blue) */
 .evidentcards.block h6:hover {
   color: #007bff; /* Change text color to blue on hover */
+}
+
+/* Hover effect for arrow inside h6 */
+.evidentcards.block h6:hover::before {
+  color: #007bff; /* Change arrow color to blue on hover */
 }
 
 /* Style the image */
@@ -61,8 +72,15 @@
 }
 
 /* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .evidentcards-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2 or 3 cards in a row */
+  }
+}
+
 @media (max-width: 768px) {
   .evidentcards-wrapper {
+    grid-template-columns: 1fr; /* 1 card per row */
     padding: 10px; /* Reduce padding on smaller screens */
   }
 
