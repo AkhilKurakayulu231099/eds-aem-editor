@@ -1,19 +1,19 @@
-/* Styling for the card container */
-.evidentcards>ul {
+/* Styling for the container (ul) */
+.evidentcards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr)); /* Responsive grid */
   grid-gap: 24px;
 }
 
 /* Styling for each individual card */
-.evidentcards>ul>li {
+.evidentcards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
   padding: 0;
-  cursor: pointer; /* Make the entire card clickable */
+  cursor: pointer;  /* Make the entire card clickable */
 }
 
 /* Header styling */
@@ -38,7 +38,7 @@
 .evidentcards .evidentcard-image {
   line-height: 0;
   transition: transform 0.3s ease;
-  cursor: pointer; /* Make the image clickable */
+  cursor: pointer;  /* Make the image clickable */
 }
 
 /* On hover, the image will scale up (move forward) */
@@ -68,11 +68,11 @@
 }
 
 /* Styling for the image */
-.evidentcards>ul>li img {
+.evidentcards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  cursor: pointer; /* Ensure the image is clickable */
+  cursor: pointer;  /* Ensure the image is clickable */
 }
 
 .evidentcards {
