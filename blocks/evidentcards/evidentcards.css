@@ -20,9 +20,10 @@
   display: flex;
   flex-direction: column; /* Ensure the card contents are stacked vertically */
   height: 100%; /* Ensure the card takes up the full height */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total size */
 }
 
-/* Ensure that image does not have unnecessary space and doesn't overflow */
+/* Ensure that image fills the entire card and merges with the card's border */
 .evidentcards > ul > li img {
   width: 100%;
   height: 100%;
@@ -32,6 +33,7 @@
   display: block; /* Remove any bottom space */
   cursor: pointer;  /* Make the image clickable */
   transition: transform 0.3s ease; /* Smooth scaling effect */
+  border: none; /* Remove any default border around the image */
 }
 
 /* Add arrow before the text in the header */
