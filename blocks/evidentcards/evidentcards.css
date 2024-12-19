@@ -13,6 +13,7 @@
   border: 1px solid #dadada;
   background-color: var(--background-color);
   padding: 0;
+  cursor: pointer; /* Make the entire card clickable */
 }
 
 /* Header styling */
@@ -37,6 +38,7 @@
 .evidentcards .evidentcard-image {
   line-height: 0;
   transition: transform 0.3s ease;
+  cursor: pointer; /* Make the image clickable */
 }
 
 /* On hover, the image will scale up (move forward) */
@@ -70,6 +72,7 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  cursor: pointer; /* Ensure the image is clickable */
 }
 
 .evidentcards {
