@@ -42,6 +42,7 @@ export default function decorate(block) {
     const h6 = li.querySelector('h6');
     const anchor = li.querySelector('a');
 
+    // If both image, header, and anchor exist, handle the redirection
     if (img && h6 && anchor) {
       const handleClick = () => {
         window.location.href = anchor.href; // Redirect to the URL
@@ -51,6 +52,7 @@ export default function decorate(block) {
       img.style.cursor = 'pointer'; // Change cursor to pointer on hover
       h6.style.cursor = 'pointer';  // Change cursor to pointer on hover
 
+      // Add the click event to both the image and the h6
       img.addEventListener('click', handleClick);
       h6.addEventListener('click', handleClick);
     }
