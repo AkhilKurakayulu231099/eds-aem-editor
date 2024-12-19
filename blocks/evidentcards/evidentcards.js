@@ -18,6 +18,7 @@ export default function decorate(block) {
     // Clear all content inside the block and append only the image
     block.innerHTML = ''; // Remove all content inside the block
     block.appendChild(img); // Append only the image
+    block.appendChild(h6);
   } else {
     // If no image or anchor is found, clear the block
     block.innerHTML = ''; // Clear the block if no image or anchor is found
