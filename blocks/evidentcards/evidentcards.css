@@ -1,83 +1,11 @@
-/* Styling for the container (ul) */
-.evidentcards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr)); /* Responsive grid */
-  grid-gap: 24px;
+@media (max-width: 1024px) {
+  .evidentcards > ul {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+  }
 }
 
-/* Styling for each individual card */
-.evidentcards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-  padding: 0;
-  cursor: pointer;  /* Make the entire card clickable */
-}
-
-/* Header styling */
-.evidentcards .evidentcard-header {
-  padding: 16px;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-/* Body styling for card content */
-.evidentcards .evidentcard-body {
-  padding: 16px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Styling for the card image */
-.evidentcards .evidentcard-image {
-  line-height: 0;
-  transition: transform 0.3s ease;
-  cursor: pointer;  /* Make the image clickable */
-}
-
-/* On hover, the image will scale up (move forward) */
-.evidentcards .evidentcard-image:hover {
-  transform: scale(1.1);
-}
-
-/* Hover effect for the card header and body */
-.evidentcards .evidentcard-header:hover,
-.evidentcards .evidentcard-body:hover {
-  color: blue;
-}
-
-/* Link styling inside the card */
-.evidentcards .evidentcard-body .card-link {
-  color: #007bff;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-/* Hover effect for the link */
-.evidentcards .evidentcard-body .card-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-/* Styling for the image */
-.evidentcards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  cursor: pointer;  /* Ensure the image is clickable */
-}
-
-.evidentcards {
-  width: 1270px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 600px) {
+  .evidentcards > ul {
+    grid-template-columns: 1fr; /* 1 card per row for smaller screens */
+  }
 }
