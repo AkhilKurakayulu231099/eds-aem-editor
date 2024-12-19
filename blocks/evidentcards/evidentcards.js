@@ -10,12 +10,12 @@ export default function decorate(block) {
     // Create a <li> element for each card
     const li = document.createElement('li');
     moveInstrumentation(card, li);
-    
+
     // Loop through the child elements of each card to structure them
     while (card.firstElementChild) {
       const div = card.firstElementChild;
       li.append(div);
-      
+
       // Apply class names to the <div> elements depending on their content
       if (div.children.length === 1 && div.querySelector('picture')) {
         div.className = 'evidentcard-image';  // Class for the image container
@@ -40,7 +40,6 @@ export default function decorate(block) {
     // Find the image, header (h6), and anchor inside the card
     const img = li.querySelector('img');
     const h6 = li.querySelector('h6');
-    console.log(img);
     const anchor = li.querySelector('a');
 
     if (img && h6 && anchor) {
@@ -65,7 +64,7 @@ export default function decorate(block) {
     // Create optimized picture using the custom function
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
-    
+
     // Replace the original <picture> with the optimized picture
     img.closest('picture').replaceWith(optimizedPic);
   });
