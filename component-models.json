@@ -32,7 +32,7 @@
     ]
   },
   {
-    "id": "evidentcards",
+    "id": "evidentcard",
     "fields": [
       {
         "component": "richtext",
