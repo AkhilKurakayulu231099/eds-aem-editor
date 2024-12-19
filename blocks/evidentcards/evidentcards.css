@@ -16,17 +16,19 @@
   cursor: pointer;  /* Make the entire card clickable */
   border-top: 4px solid blue; /* Make the top border blue always */
   transition: transform 0.3s ease, border-top-color 0.3s ease;
+  overflow: hidden; /* Prevent image from overflowing outside the card */
 }
 
-/* Ensure that image does not have unnecessary space */
+/* Ensure that image does not have unnecessary space and doesn't overflow */
 .evidentcards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensures the image fits without stretching */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the space */
   margin: 0;
   padding: 0;
   display: block; /* Remove bottom space */
   cursor: pointer;  /* Make the image clickable */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 /* Add arrow before the text in the header */
@@ -59,8 +61,8 @@
 }
 
 /* Hover effect for the image */
-.evidentcards .evidentcard-image:hover {
-  transform: scale(1.05); /* Slightly scale the image */
+.evidentcards .evidentcard-image:hover img {
+  transform: scale(1.1); /* Slightly scale the image inside its container */
 }
 
 /* Hover effect for the card body */
@@ -75,7 +77,7 @@
   pointer-events: none; /* Disable clicking the link directly */
 }
 
-/* Link inside the body should not show up, but the body remains clickable */
+/* Link inside the body should not show up, but keep its presence */
 .evidentcards .evidentcard-body a::after {
   content: ''; /* Remove link text, but keep its presence */
 }
@@ -88,7 +90,7 @@
 
 /* Ensure hover over image also triggers the text hover */
 .evidentcards > ul > li:hover img {
-  transform: scale(1.05); /* Slightly scale the image */
+  transform: scale(1.1); /* Slightly scale the image */
 }
 
 .evidentcards {
