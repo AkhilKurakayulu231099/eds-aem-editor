@@ -1,1 +1,76 @@
 
+/* Style the wrapper around the evident cards */
+.evidentcards-wrapper {
+  margin: 0 auto; /* Center the wrapper */
+  padding: 20px; /* Add padding around the block */
+  max-width: 1200px; /* Set a max-width for the wrapper */
+  display: flex; /* Flexbox for easy alignment */
+  justify-content: center; /* Center the block horizontally */
+  flex-direction: column;
+  align-items: center; /* Align elements in the center */
+  text-align: center; /* Center text */
+}
+
+/* Style the evident card block */
+.evidentcards.block {
+  position: relative;
+  border: 2px solid #ddd; /* Light border around the block */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  padding: 20px;
+  width: 100%;
+  max-width: 800px; /* Set a max width for the component */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the evident card block */
+.evidentcards.block:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Style the h6 element */
+.evidentcards.block h6 {
+  font-size: 1.5rem; /* Font size for the heading */
+  font-weight: bold; /* Make the heading bold */
+  margin-bottom: 15px; /* Add space below the heading */
+  color: #333; /* Dark text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: underline; /* Underline the heading */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Hover effect for h6 element */
+.evidentcards.block h6:hover {
+  color: #007bff; /* Change text color to blue on hover */
+}
+
+/* Style the image */
+.evidentcards.block img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Hover effect for the image */
+.evidentcards.block img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .evidentcards-wrapper {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .evidentcards.block {
+    padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .evidentcards.block h6 {
+    font-size: 1.3rem; /* Smaller font size for the heading */
+  }
+}
