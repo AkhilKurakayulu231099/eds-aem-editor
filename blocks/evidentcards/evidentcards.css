@@ -1,1 +1,100 @@
 
+/* Style the wrapper around the evident cards */
+.evidentcards-wrapper {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust columns based on available space */
+  gap: 20px; /* Space between cards */
+  margin: 0 auto; /* Center the wrapper */
+  padding: 20px; /* Padding around the block */
+  max-width: 1200px; /* Max-width for the wrapper */
+}
+
+/* Style the evident card block */
+.evidentcards.block {
+  position: relative;
+  border: 2px solid #ddd; /* Light border around the block */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  border-top: 4px solid #007bff; /* Blue top border constant */
+}
+
+/* Hover effect for the whole component */
+.evidentcards.block:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Style the h6 element */
+.evidentcards.block h6 {
+  font-size: 1.5rem; /* Font size for the heading */
+  font-weight: bold; /* Make the heading bold */
+  margin-bottom: 15px; /* Add space below the heading */
+  color: #333; /* Dark text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+  display: flex;
+  align-items: center; /* Center text and arrow vertically */
+}
+
+/* Add an arrow symbol before the text using ::before pseudo-element */
+.evidentcards.block h6::before {
+  content: '→'; /* Unicode arrow symbol */
+  margin-right: 10px; /* Space between the arrow and text */
+  font-size: 1.2rem; /* Arrow size */
+  color: #333; /* Default arrow color (same as text) */
+}
+
+/* Hover effect for h6 element (text and arrow turn blue) */
+.evidentcards.block h6:hover,
+.evidentcards.block:hover h6 {
+  color: #007bff; /* Change text color to blue on hover */
+}
+
+/* Hover effect for arrow inside h6 */
+.evidentcards.block h6:hover::before,
+.evidentcards.block:hover h6::before {
+  color: #007bff; /* Change arrow color to blue on hover */
+}
+
+/* Hover effect for image */
+.evidentcards.block img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain the aspect ratio */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Hover effect for the image */
+.evidentcards.block img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* When the image is hovered, also turn the h6 text and arrow blue */
+.evidentcards.block img:hover ~ h6,
+.evidentcards.block:hover img ~ h6 {
+  color: #007bff; /* Turn h6 text blue when image is hovered */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .evidentcards-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2 or 3 cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .evidentcards-wrapper {
+    grid-template-columns: 1fr; /* 1 card per row */
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .evidentcards.block {
+    padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .evidentcards.block h6 {
+    font-size: 1.3rem; /* Smaller font size for the heading */
+  }
+}
