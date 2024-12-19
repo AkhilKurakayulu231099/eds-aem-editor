@@ -16,7 +16,6 @@
       "cards",
       "columns",
       "fragment",
-      "evidentcards",
       "evidenthometext",
       "quote",
       "evidentbanner"
@@ -26,6 +25,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "evidentcards",
+    "components": [
+      "evidentcard"
     ]
   },
   {
