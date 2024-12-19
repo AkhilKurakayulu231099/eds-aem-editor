@@ -1,8 +1,7 @@
-
 /* Style the wrapper around the evident cards */
 .evidentcards-wrapper {
   display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust columns based on available space */
+  grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
   gap: 20px; /* Space between cards */
   margin: 0 auto; /* Center the wrapper */
   padding: 20px; /* Padding around the block */
@@ -117,7 +116,7 @@
 /* Media queries for responsiveness */
 @media (max-width: 1024px) {
   .evidentcards-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2 or 3 cards in a row */
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
   }
 }
 
