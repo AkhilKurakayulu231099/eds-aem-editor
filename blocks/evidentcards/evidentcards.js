@@ -1,4 +1,3 @@
-
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
@@ -21,6 +20,17 @@ export default function decorate(block) {
       if (div.children.length === 1 && div.querySelector('picture')) {
         div.className = 'evidentcard-image';  // Class for the image container
       } else if (div.querySelector('p')) {
+        // Handle the link inside the <p> tag
+        const link = div.querySelector('a');
+        if (link) {
+          // Embed the anchor inside the card body
+          const cardLink = document.createElement('a');
+          cardLink.href = link.href;
+          cardLink.textContent = link.title || link.href;  // Use the title or URL as text
+          cardLink.className = 'card-link'; // Optional: Add a class for styling
+          div.innerHTML = ''; // Clear the content of <p>
+          div.appendChild(cardLink); // Append the anchor tag to the body
+        }
         div.className = 'evidentcard-body';  // Class for the body containing the link
       } else {
         div.className = 'evidentcard-header';  // Default class for the header
