@@ -1,3 +1,4 @@
+/* Styling for the card container */
 .evidentcards>ul {
   list-style: none;
   margin: 0;
@@ -7,40 +8,70 @@
   grid-gap: 24px;
 }
 
+/* Styling for each individual card */
 .evidentcards>ul>li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  padding: 0;
 }
 
-.evidentcards .evidentcards-evidentcard-body {
-  margin: 16px;
+/* Header styling */
+.evidentcards .evidentcard-header {
+  padding: 16px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+/* Body styling for card content */
+.evidentcards .evidentcard-body {
+  padding: 16px;
   color: black;
 }
 
-.evidentcards .evidentcards-evidentcard-image {
+/* Styling for the card image */
+.evidentcards .evidentcard-image {
   line-height: 0;
   transition: transform 0.3s ease;
-  /* Smooth transition for transformation */
 }
 
 /* On hover, the image will scale up (move forward) */
-.evidentcards .evidentcards-evidentcard-image:hover {
+.evidentcards .evidentcard-image:hover {
   transform: scale(1.1);
-  /* Increases the size to 110% of the original size */
-}
-.evidentcards .evidentcards-evidentcard-body:hover {
-  color: blue;
-  /* Increases the size to 110% of the original size */
 }
 
+/* Hover effect for the card header and body */
+.evidentcards .evidentcard-header:hover,
+.evidentcards .evidentcard-body:hover {
+  color: blue;
+}
+
+/* Link styling inside the card */
+.evidentcards .evidentcard-body .card-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Hover effect for the link */
+.evidentcards .evidentcard-body .card-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Styling for the image */
 .evidentcards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
 .evidentcards {
-    width: 1270px;
-    padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 1270px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
