@@ -60,7 +60,7 @@
     {
       "id": "evidentcards",
       "components": [
-        "evidentcards"
+        "evidentcard"
       ]
     }
   ]
