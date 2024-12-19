@@ -1,46 +1,27 @@
 /* Style the wrapper around the evident cards */
 .evidentcards-wrapper {
-  display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
+  display: flex; /* Use Flexbox to arrange the cards */
+  flex-wrap: wrap; /* Allow wrapping, but we will limit how it wraps */
   gap: 20px; /* Space between cards */
   margin: 0 auto; /* Center the wrapper */
   padding: 20px; /* Padding around the block */
   max-width: 1200px; /* Max-width for the wrapper */
 }
 
-/* Style the evident card block */
-.evidentcards.block {
-  position: relative;
-  border: 2px solid #ddd; /* Light border around the block */
-  overflow: hidden; /* Ensure content doesn't overflow */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  padding: 20px;
+/* Style for individual evident cards */
+.evidentcards-wrapper > div {
+  width: calc(33.33% - 20px); /* Make each card take up 1/3 of the container, minus gap */
+  box-sizing: border-box; /* Ensure that padding and borders are included in width calculation */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   border-top: 4px solid #007bff; /* Blue top border constant */
+  padding: 20px;
+  background: #fff; /* White background for each card */
+  border: 2px solid #ddd; /* Light border around each card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Hover effect for the whole component */
-.evidentcards.block:hover {
-  transform: scale(1.03); /* Slight zoom effect */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-/* Style the <ul> and <li> for the list layout */
-.evidentcards-wrapper ul {
-  list-style: none; /* Remove default list styling */
-  padding: 0;
-  margin: 0;
-}
-
-.evidentcards-wrapper li {
-  border: 2px solid #ddd; /* Light border around each card */
-  margin-bottom: 20px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  border-top: 4px solid #007bff; /* Blue top border constant */
-}
-
-.evidentcards-wrapper li:hover {
+.evidentcards-wrapper > div:hover {
   transform: scale(1.03); /* Slight zoom effect */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
@@ -67,13 +48,13 @@
 
 /* Hover effect for h6 element (text and arrow turn blue) */
 .evidentcard-header h6:hover,
-.evidentcards-wrapper li:hover .evidentcard-header h6 {
+.evidentcards-wrapper > div:hover .evidentcard-header h6 {
   color: #007bff; /* Change text color to blue on hover */
 }
 
 /* Hover effect for arrow inside h6 */
 .evidentcard-header h6:hover::before,
-.evidentcards-wrapper li:hover .evidentcard-header h6::before {
+.evidentcards-wrapper > div:hover .evidentcard-header h6::before {
   color: #007bff; /* Change arrow color to blue on hover */
 }
 
@@ -115,18 +96,21 @@
 
 /* Media queries for responsiveness */
 @media (max-width: 1024px) {
-  .evidentcards-wrapper {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+  .evidentcards-wrapper > div {
+    width: calc(50% - 20px); /* 2 cards per row */
   }
 }
 
 @media (max-width: 768px) {
+  .evidentcards-wrapper > div {
+    width: 100%; /* 1 card per row */
+  }
+
   .evidentcards-wrapper {
-    grid-template-columns: 1fr; /* 1 card per row */
     padding: 10px; /* Reduce padding on smaller screens */
   }
 
-  .evidentcards-wrapper li {
+  .evidentcards-wrapper > div {
     padding: 15px; /* Less padding on smaller screens */
   }
 
