@@ -25,6 +25,7 @@ export default function decorate(block) {
         if (link) {
           // Create a new anchor element to replace the raw URL
           const cardLink = document.createElement('a');
+          console.log(cardLink);
           cardLink.href = link.href;
           cardLink.textContent = link.title || link.href;  // Use the title or URL as text
           cardLink.className = 'card-link'; // Optional: Add a class for styling
