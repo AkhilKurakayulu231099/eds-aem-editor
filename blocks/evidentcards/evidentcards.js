@@ -1,57 +1,56 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { moveInstrumentation } from '../../scripts/scripts.js';
-
 export default function decorate(block) {
-  // Find all the evidentcard items inside the block
+  // Create the <ul> element to hold the list of cards
   const ul = document.createElement('ul');
-
-  // Loop through each item (evidentcard) inside the block
+  
+  // Loop through all the child elements of the block (which are the "evidentcard" components)
   [...block.children].forEach((card) => {
+    // Create a <li> element for each card
     const li = document.createElement('li');
-    
-    // Move the children of each card into the new <li>
     moveInstrumentation(card, li);
-
+    
+    // Loop through the child elements of each card to structure them
     while (card.firstElementChild) {
       const div = card.firstElementChild;
       li.append(div);
-
-      // Apply classes to each div based on its content
-      if (div.querySelector('picture')) {
+      
+      // Apply class names to the <div> elements depending on their content
+      if (div.children.length === 1 && div.querySelector('picture')) {
         div.className = 'evidentcard-image';  // Class for the image container
       } else if (div.querySelector('p')) {
         div.className = 'evidentcard-body';  // Class for the body containing the link
+        
+        // Hide the <p> element while keeping the link in the background
+        const pElement = div.querySelector('p');
+        if (pElement) {
+          pElement.style.display = 'none';  // Hide the <p> element
+        }
+        
+        // Optionally, wrap the <a> tag around the rest of the content
+        const link = div.querySelector('a');
+        if (link) {
+          // Move the link inside the body so that it wraps the content (or just hide the p)
+          div.innerHTML = div.innerHTML.replace(link.outerHTML, `<span class="evidentcard-link">${link.outerHTML}</span>`);
+        }
       } else {
         div.className = 'evidentcard-header';  // Default class for the header
       }
     }
 
-    // Append the structured card to the <ul>
+    // Append the structured card item to the list
     ul.append(li);
   });
 
-  // Now process the links and the images to make them clickable
-  ul.querySelectorAll('li').forEach((li) => {
-    const img = li.querySelector('img');
-    const h6 = li.querySelector('h6');
-    const anchor = li.querySelector('a');
-
-    if (img && anchor) {
-      const handleClick = () => {
-        window.location.href = anchor.href;  // Redirect to the URL from the anchor
-      };
-
-      // Make the image and header clickable
-      img.style.cursor = 'pointer';
-      h6.style.cursor = 'pointer';
-
-      // Add click event listeners to both image and header
-      img.addEventListener('click', handleClick);
-      h6.addEventListener('click', handleClick);
-    }
+  // Now, process the images within the "picture" elements
+  ul.querySelectorAll('picture > img').forEach((img) => {
+    // Create optimized picture using the custom function
+    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
+    moveInstrumentation(img, optimizedPic.querySelector('img'));
+    
+    // Replace the original <picture> with the optimized picture
+    img.closest('picture').replaceWith(optimizedPic);
   });
 
-  // Clear the existing block content and append the new <ul>
+  // Clear the existing content of the block and append the structured <ul>
   block.textContent = '';
   block.append(ul);
 }
