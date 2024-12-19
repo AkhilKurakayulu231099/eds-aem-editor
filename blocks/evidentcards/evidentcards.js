@@ -40,6 +40,7 @@ export default function decorate(block) {
     // Find the image, header (h6), and anchor inside the card
     const img = li.querySelector('img');
     const h6 = li.querySelector('h6');
+    console.log(img);
     const anchor = li.querySelector('a');
 
     if (img && h6 && anchor) {
