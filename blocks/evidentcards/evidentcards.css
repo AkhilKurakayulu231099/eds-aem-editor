@@ -1,120 +1,46 @@
-/* Style the wrapper around the evident cards */
-.evidentcards-wrapper {
-  display: flex; /* Use Flexbox to arrange the cards */
-  flex-wrap: wrap; /* Allow wrapping, but we will limit how it wraps */
-  gap: 20px; /* Space between cards */
-  margin: 0 auto; /* Center the wrapper */
-  padding: 20px; /* Padding around the block */
-  max-width: 1200px; /* Max-width for the wrapper */
-}
-
-/* Style for individual evident cards */
-.evidentcards-wrapper > div {
-  width: calc(33.33% - 20px); /* Make each card take up 1/3 of the container, minus gap */
-  box-sizing: border-box; /* Ensure that padding and borders are included in width calculation */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  border-top: 4px solid #007bff; /* Blue top border constant */
-  padding: 20px;
-  background: #fff; /* White background for each card */
-  border: 2px solid #ddd; /* Light border around each card */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Hover effect for the whole component */
-.evidentcards-wrapper > div:hover {
-  transform: scale(1.03); /* Slight zoom effect */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-/* Style the header (h6) in each card */
-.evidentcard-header h6 {
-  font-size: 1.5rem; /* Font size for the heading */
-  font-weight: bold; /* Make the heading bold */
-  margin-bottom: 15px; /* Add space below the heading */
-  color: #333; /* Dark text color */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: color 0.3s ease; /* Smooth color change on hover */
-  display: flex;
-  align-items: center; /* Center text and arrow vertically */
-}
-
-/* Add an arrow symbol before the text using ::before pseudo-element */
-.evidentcard-header h6::before {
-  content: '→'; /* Unicode arrow symbol */
-  margin-right: 10px; /* Space between the arrow and text */
-  font-size: 1.2rem; /* Arrow size */
-  color: #333; /* Default arrow color (same as text) */
-}
-
-/* Hover effect for h6 element (text and arrow turn blue) */
-.evidentcard-header h6:hover,
-.evidentcards-wrapper > div:hover .evidentcard-header h6 {
-  color: #007bff; /* Change text color to blue on hover */
-}
-
-/* Hover effect for arrow inside h6 */
-.evidentcard-header h6:hover::before,
-.evidentcards-wrapper > div:hover .evidentcard-header h6::before {
-  color: #007bff; /* Change arrow color to blue on hover */
-}
-
-/* Style for image container */
-.evidentcard-image picture {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.evidentcard-image img {
-  width: 100%;
-  height: auto;
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
-}
-
-/* Hover effect for the image */
-.evidentcard-image img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Style for the body with the link */
-.evidentcard-body p {
+.evidentcards>ul {
+  list-style: none;
   margin: 0;
-  font-size: 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
 }
 
-.evidentcard-body a {
-  color: #007bff; /* Default link color */
-  text-decoration: none; /* Remove underline from links */
+.evidentcards>ul>li {
+  border: 1px solid #dadada;
+  background-color: var(--background-color);
 }
 
-.evidentcard-body a:hover {
-  color: #0056b3; /* Darker blue on hover */
-  text-decoration: underline; /* Underline on hover */
+.evidentcards .evidentcards-evidentcard-body {
+  margin: 16px;
+  color: black;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 1024px) {
-  .evidentcards-wrapper > div {
-    width: calc(50% - 20px); /* 2 cards per row */
-  }
+.evidentcards .evidentcards-evidentcard-image {
+  line-height: 0;
+  transition: transform 0.3s ease;
+  /* Smooth transition for transformation */
 }
 
-@media (max-width: 768px) {
-  .evidentcards-wrapper > div {
-    width: 100%; /* 1 card per row */
-  }
+/* On hover, the image will scale up (move forward) */
+.evidentcards .evidentcards-evidentcard-image:hover {
+  transform: scale(1.1);
+  /* Increases the size to 110% of the original size */
+}
+.evidentcards .evidentcards-evidentcard-body:hover {
+  color: blue;
+  /* Increases the size to 110% of the original size */
+}
 
-  .evidentcards-wrapper {
-    padding: 10px; /* Reduce padding on smaller screens */
-  }
-
-  .evidentcards-wrapper > div {
-    padding: 15px; /* Less padding on smaller screens */
-  }
-
-  .evidentcard-header h6 {
-    font-size: 1.3rem; /* Smaller font size for the heading */
-  }
+.evidentcards>ul>li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.evidentcards {
+    width: 1270px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
