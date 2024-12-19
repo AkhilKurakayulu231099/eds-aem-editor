@@ -12,19 +12,17 @@
 .evidentcards.block {
   position: relative;
   border: 2px solid #ddd; /* Light border around the block */
-  border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Ensure content doesn't overflow */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  border-top: 4px solid transparent; /* Top border for whole component */
+  border-top: 4px solid #007bff; /* Blue top border constant */
 }
 
-/* Blue top border for the whole component when hovered */
+/* Hover effect for the whole component */
 .evidentcards.block:hover {
   transform: scale(1.03); /* Slight zoom effect */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-  border-top: 4px solid #007bff; /* Blue top border when hovered */
 }
 
 /* Style the h6 element */
@@ -63,7 +61,6 @@
 .evidentcards.block img {
   width: 100%; /* Make the image responsive */
   height: auto; /* Maintain the aspect ratio */
-  border-radius: 8px; /* Rounded corners for the image */
   cursor: pointer; /* Pointer cursor on hover */
   transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
