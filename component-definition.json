@@ -175,6 +175,21 @@
           }
         },
         {
+          "title": "Evidentcard",
+          "id": "evidentcard",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Evidentcard",
+                  "model": "evidentcard"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Evidenthometext",
           "id": "evidenthometext",
           "plugins": {
