@@ -14,16 +14,22 @@
   background-color: var(--background-color);
   padding: 0;
   cursor: pointer;  /* Make the entire card clickable */
-  border-top: 4px solid transparent; /* Set transparent top border initially */
-  transition: border-top-color 0.3s ease;
+  border-top: 4px solid blue; /* Make the top border blue always */
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
 }
 
-/* Hover effect for the whole card */
-.evidentcards > ul > li:hover {
-  border-top-color: blue; /* Turn the top border blue when hovering over the card */
+/* Ensure that image does not have unnecessary space */
+.evidentcards > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fits without stretching */
+  margin: 0;
+  padding: 0;
+  display: block; /* Remove bottom space */
+  cursor: pointer;  /* Make the image clickable */
 }
 
-/* Header styling */
+/* Add arrow before the text in the header */
 .evidentcards .evidentcard-header {
   padding: 16px;
   font-size: 1.25rem;
@@ -34,12 +40,12 @@
   transition: color 0.3s ease;
 }
 
-/* Add an arrow before the text in the header */
+/* Arrow symbol before text */
 .evidentcards .evidentcard-header::before {
   content: '→'; /* Arrow symbol */
   margin-right: 8px; /* Space between the arrow and the text */
-  color: black; /* Initial arrow color */
-  font-size: 1.25rem; /* Arrow size */
+  color: black; /* Initial color of the arrow */
+  font-size: 1.25rem;
 }
 
 /* Hover effect for the header text and arrow */
@@ -52,41 +58,17 @@
   color: blue; /* Turn the arrow blue when hovered */
 }
 
-/* Body styling for card content */
-.evidentcards .evidentcard-body {
-  padding: 16px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  transition: color 0.3s ease;
+/* Hover effect for the image */
+.evidentcards .evidentcard-image:hover {
+  transform: scale(1.05); /* Slightly scale the image */
 }
 
 /* Hover effect for the card body */
 .evidentcards .evidentcard-body:hover {
-  color: blue; /* Change body text color on hover */
+  color: blue; /* Change the text color to blue */
 }
 
-/* Styling for the card image */
-.evidentcards .evidentcard-image {
-  line-height: 0;
-  transition: transform 0.3s ease;
-  cursor: pointer;  /* Make the image clickable */
-}
-
-/* On hover, the image will scale up (move forward) */
-.evidentcards .evidentcard-image:hover {
-  transform: scale(1.1);
-}
-
-/* Hover effect for the card header and body */
-.evidentcards .evidentcard-header:hover,
-.evidentcards .evidentcard-body:hover {
-  color: blue;
-}
-
-/* Hide the link in the body (keep it functional but hidden visually) */
+/* Make the link text invisible but still clickable */
 .evidentcards .evidentcard-body a {
   text-decoration: none;
   color: transparent; /* Hide the link text */
@@ -98,12 +80,15 @@
   content: ''; /* Remove link text, but keep its presence */
 }
 
-/* Styling for the image */
-.evidentcards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  cursor: pointer;  /* Ensure the image is clickable */
+/* Make both the header and image clickable, and trigger the same hover effect */
+.evidentcards > ul > li:hover .evidentcard-header,
+.evidentcards > ul > li:hover .evidentcard-body {
+  color: blue; /* Both text and image should turn blue on hover */
+}
+
+/* Ensure hover over image also triggers the text hover */
+.evidentcards > ul > li:hover img {
+  transform: scale(1.05); /* Slightly scale the image */
 }
 
 .evidentcards {
