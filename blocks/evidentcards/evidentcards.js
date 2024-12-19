@@ -23,7 +23,7 @@ export default function decorate(block) {
         // Handle the link inside the <p> tag
         const link = div.querySelector('a');
         if (link) {
-          // Embed the anchor inside the card body
+          // Create a new anchor element to replace the raw URL
           const cardLink = document.createElement('a');
           cardLink.href = link.href;
           cardLink.textContent = link.title || link.href;  // Use the title or URL as text
