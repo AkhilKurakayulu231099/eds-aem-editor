@@ -3,7 +3,7 @@
 export default function decorate(block) {
   // Find the image inside the block
   const img = block.querySelector('img');
-  
+  const h6 = block.querySelector('h6');
   // Find the anchor tag inside the block that contains the URL
   const anchor = block.querySelector('a');
 
