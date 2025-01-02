@@ -78,7 +78,7 @@
 /* Make the link text invisible but still clickable */
 .evidentcards .evidentcard-body a {
   text-decoration: none;
-  color: transparent; /* Hide the link text */
+  display: none; /* Hide the link text */
   pointer-events: none; /* Disable clicking the link directly */
 }
 
